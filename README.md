@@ -27,14 +27,13 @@ The **Labor Management System** provides the following functionalities:
 
 - **Backend:** Python, Flask  
 - **Frontend:** HTML, CSS
-- **Database:** MySQL    
+- **Database:** SQLite3   
 
 ---
 
 ## Prerequisites
 
-1. **Python** installed (3.8 or higher recommended)  
-2. **MySQL** installed and running  
+1. **Python** installed (3.8 or higher recommended) 
 
 ---
 ## Virtual Environment Setup (Recommended)
@@ -44,7 +43,7 @@ It is recommended to use a virtual environment to keep dependencies isolated:
 1. **Navigate to your project folder**
 
 ```bash
-cd path\to\labor-management-project
+cd path\to\labour-management-project-sqlite
 ```
 
 2. **Create a virtual environment**
@@ -68,7 +67,6 @@ pip install -r requirements.txt
 ## Database setup files
 
 - **schema.sql** – Contains table definitions
-- **triggers.sql** – Contains triggers
 - **data.sql** – Contains sample data
 
 > Make sure the database is created and ready before running the project.
@@ -79,28 +77,26 @@ pip install -r requirements.txt
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/afrah1510/labour-management-project.git
-cd labour-management-project
+git clone https://github.com/afrah1510/labour-management-project-sqlite.git
+cd labour-management-project-sqlite
 ```
 
-2. **Update configuration files**
-- Open config.py and replace
-  ```bash
-  MYSQL_USER = "root"          # replace with your MySQL username
-  MYSQL_PASSWORD = "12345"     # replace with your MySQL password
-  ```
+2. **Open Command Prompt**
 
-3. **Open Command Prompt**
-
-4. **Activate the virtual environment**
+3. **Activate the virtual environment**
 Windows
 ```bash
 my_venv\Scripts\activate
 ```
 
-5. **Run the project**
+4. **Run the project**
+```bash
+python init_db.py
+```
+
 ```bash
 python app.py
 ```
+
 > This script launches the Flask app.
 > Access the app at http://localhost:5000
